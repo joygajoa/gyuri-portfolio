@@ -64,7 +64,6 @@ export default function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
     const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
     if (!serviceId || !templateId || !publicKey) {
-      // EmailJS 미설정 시 mailto fallback
       const subject = encodeURIComponent(`[포트폴리오 의뢰] ${form.inquiryType} - ${form.name}`);
       const body = encodeURIComponent(
         `이름: ${form.name}\n이메일: ${form.email}\n연락처: ${form.phone}\n\n의뢰 유형: ${form.inquiryType}\n예산: ${form.budget}\n희망 일정: ${form.timeline}\n\n내용:\n${form.message}`
@@ -118,16 +117,16 @@ export default function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
       <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} />
 
       {/* Modal */}
-      <div className="relative bg-[#F5F1E8] rounded-t-3xl md:rounded-3xl w-full md:max-w-2xl max-h-[95vh] overflow-y-auto shadow-2xl animate-fade-in-up">
+      <div className="relative bg-white rounded-t-3xl md:rounded-3xl w-full md:max-w-2xl max-h-[95vh] overflow-y-auto shadow-2xl animate-fade-in-up">
         {/* Header */}
-        <div className="sticky top-0 bg-[#F5F1E8] border-b border-[#D8CEB8] px-6 md:px-8 py-5 flex items-center justify-between z-10">
+        <div className="sticky top-0 bg-white border-b border-[#E5E8EB] px-6 md:px-8 py-5 flex items-center justify-between z-10">
           <div>
-            <h2 className="text-xl font-black text-[#1C1C1C]">의뢰서 작성</h2>
-            <p className="text-sm text-[#6B6B6B]">어떤 프로젝트인지 알려주세요</p>
+            <h2 className="text-xl font-black text-[#191F28]">의뢰서 작성</h2>
+            <p className="text-sm text-[#8B95A1]">어떤 프로젝트인지 알려주세요</p>
           </div>
           <button
             onClick={onClose}
-            className="w-8 h-8 rounded-full bg-[#EEE8D8] flex items-center justify-center text-[#6B6B6B] hover:bg-[#D8CEB8] transition-colors"
+            className="w-8 h-8 rounded-full bg-[#F7F8FA] flex items-center justify-center text-[#8B95A1] hover:bg-[#E5E8EB] transition-colors"
           >
             ✕
           </button>
@@ -137,16 +136,16 @@ export default function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
         <div className="px-6 md:px-8 py-6">
           {status === "success" ? (
             <div className="text-center py-12">
-              <div className="text-6xl mb-4">🌿</div>
-              <h3 className="text-2xl font-black text-[#1C1C1C] mb-3">의뢰서가 전달되었습니다!</h3>
-              <p className="text-[#6B6B6B] mb-8">
-                빠르면 24시간 내로 답장드리겠습니다.
+              <div className="text-6xl mb-4">✅</div>
+              <h3 className="text-2xl font-black text-[#191F28] mb-3">전달됐어요!</h3>
+              <p className="text-[#8B95A1] mb-8">
+                빠르면 24시간 내로 답장드릴게요.
                 <br />
                 <span className="text-sm">lje1080@gmail.com</span>
               </p>
               <button
                 onClick={() => { handleReset(); onClose(); }}
-                className="bg-[#4A7C59] text-white font-bold px-8 py-3 rounded-full hover:bg-[#2D5016] transition-colors"
+                className="bg-[#3182F6] text-white font-bold px-8 py-3 rounded-full hover:bg-[#1B64DA] transition-colors"
               >
                 닫기
               </button>
@@ -156,8 +155,8 @@ export default function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
               {/* Name + Email */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-[#1C1C1C] mb-1.5">
-                    이름 <span className="text-[#4A7C59]">*</span>
+                  <label className="block text-sm font-medium text-[#191F28] mb-1.5">
+                    이름 <span className="text-[#3182F6]">*</span>
                   </label>
                   <input
                     type="text"
@@ -166,12 +165,12 @@ export default function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
                     value={form.name}
                     onChange={handleChange}
                     placeholder="홍길동"
-                    className="w-full bg-white border border-[#D8CEB8] rounded-xl px-4 py-3 text-sm text-[#1C1C1C] placeholder-[#A8A8A8] focus:outline-none focus:border-[#4A7C59] focus:ring-1 focus:ring-[#4A7C59] transition-colors"
+                    className="w-full bg-[#F7F8FA] border border-[#E5E8EB] rounded-xl px-4 py-3 text-sm text-[#191F28] placeholder-[#8B95A1] focus:outline-none focus:border-[#3182F6] focus:ring-1 focus:ring-[#3182F6] transition-colors"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-[#1C1C1C] mb-1.5">
-                    이메일 <span className="text-[#4A7C59]">*</span>
+                  <label className="block text-sm font-medium text-[#191F28] mb-1.5">
+                    이메일 <span className="text-[#3182F6]">*</span>
                   </label>
                   <input
                     type="email"
@@ -180,14 +179,14 @@ export default function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
                     value={form.email}
                     onChange={handleChange}
                     placeholder="hello@example.com"
-                    className="w-full bg-white border border-[#D8CEB8] rounded-xl px-4 py-3 text-sm text-[#1C1C1C] placeholder-[#A8A8A8] focus:outline-none focus:border-[#4A7C59] focus:ring-1 focus:ring-[#4A7C59] transition-colors"
+                    className="w-full bg-[#F7F8FA] border border-[#E5E8EB] rounded-xl px-4 py-3 text-sm text-[#191F28] placeholder-[#8B95A1] focus:outline-none focus:border-[#3182F6] focus:ring-1 focus:ring-[#3182F6] transition-colors"
                   />
                 </div>
               </div>
 
               {/* Phone */}
               <div>
-                <label className="block text-sm font-medium text-[#1C1C1C] mb-1.5">
+                <label className="block text-sm font-medium text-[#191F28] mb-1.5">
                   연락처
                 </label>
                 <input
@@ -196,14 +195,14 @@ export default function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
                   value={form.phone}
                   onChange={handleChange}
                   placeholder="010-0000-0000"
-                  className="w-full bg-white border border-[#D8CEB8] rounded-xl px-4 py-3 text-sm text-[#1C1C1C] placeholder-[#A8A8A8] focus:outline-none focus:border-[#4A7C59] focus:ring-1 focus:ring-[#4A7C59] transition-colors"
+                  className="w-full bg-[#F7F8FA] border border-[#E5E8EB] rounded-xl px-4 py-3 text-sm text-[#191F28] placeholder-[#8B95A1] focus:outline-none focus:border-[#3182F6] focus:ring-1 focus:ring-[#3182F6] transition-colors"
                 />
               </div>
 
               {/* Inquiry type */}
               <div>
-                <label className="block text-sm font-medium text-[#1C1C1C] mb-2">
-                  의뢰 유형 <span className="text-[#4A7C59]">*</span>
+                <label className="block text-sm font-medium text-[#191F28] mb-2">
+                  의뢰 유형 <span className="text-[#3182F6]">*</span>
                 </label>
                 <div className="flex flex-wrap gap-2">
                   {inquiryTypes.map((type) => (
@@ -213,8 +212,8 @@ export default function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
                       onClick={() => setForm((p) => ({ ...p, inquiryType: type }))}
                       className={`px-4 py-2 rounded-full text-sm font-medium border transition-all duration-150 ${
                         form.inquiryType === type
-                          ? "bg-[#4A7C59] text-white border-[#4A7C59]"
-                          : "bg-white text-[#6B6B6B] border-[#D8CEB8] hover:border-[#4A7C59]"
+                          ? "bg-[#3182F6] text-white border-[#3182F6]"
+                          : "bg-[#F7F8FA] text-[#8B95A1] border-[#E5E8EB] hover:border-[#3182F6]"
                       }`}
                     >
                       {type}
@@ -226,14 +225,14 @@ export default function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
               {/* Budget + Timeline */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-[#1C1C1C] mb-1.5">
+                  <label className="block text-sm font-medium text-[#191F28] mb-1.5">
                     예산 범위
                   </label>
                   <select
                     name="budget"
                     value={form.budget}
                     onChange={handleChange}
-                    className="w-full bg-white border border-[#D8CEB8] rounded-xl px-4 py-3 text-sm text-[#1C1C1C] focus:outline-none focus:border-[#4A7C59] focus:ring-1 focus:ring-[#4A7C59] transition-colors appearance-none"
+                    className="w-full bg-[#F7F8FA] border border-[#E5E8EB] rounded-xl px-4 py-3 text-sm text-[#191F28] focus:outline-none focus:border-[#3182F6] focus:ring-1 focus:ring-[#3182F6] transition-colors appearance-none"
                   >
                     <option value="">선택해주세요</option>
                     {budgetRanges.map((b) => (
@@ -242,7 +241,7 @@ export default function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
                   </select>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-[#1C1C1C] mb-1.5">
+                  <label className="block text-sm font-medium text-[#191F28] mb-1.5">
                     희망 일정
                   </label>
                   <input
@@ -251,15 +250,15 @@ export default function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
                     value={form.timeline}
                     onChange={handleChange}
                     placeholder="예: 5월 중, 약 2주"
-                    className="w-full bg-white border border-[#D8CEB8] rounded-xl px-4 py-3 text-sm text-[#1C1C1C] placeholder-[#A8A8A8] focus:outline-none focus:border-[#4A7C59] focus:ring-1 focus:ring-[#4A7C59] transition-colors"
+                    className="w-full bg-[#F7F8FA] border border-[#E5E8EB] rounded-xl px-4 py-3 text-sm text-[#191F28] placeholder-[#8B95A1] focus:outline-none focus:border-[#3182F6] focus:ring-1 focus:ring-[#3182F6] transition-colors"
                   />
                 </div>
               </div>
 
               {/* Message */}
               <div>
-                <label className="block text-sm font-medium text-[#1C1C1C] mb-1.5">
-                  프로젝트 상세 설명 <span className="text-[#4A7C59]">*</span>
+                <label className="block text-sm font-medium text-[#191F28] mb-1.5">
+                  프로젝트 상세 설명 <span className="text-[#3182F6]">*</span>
                 </label>
                 <textarea
                   name="message"
@@ -268,14 +267,14 @@ export default function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
                   onChange={handleChange}
                   rows={5}
                   placeholder="어떤 프로젝트인지, 무엇이 필요한지 자유롭게 작성해주세요."
-                  className="w-full bg-white border border-[#D8CEB8] rounded-xl px-4 py-3 text-sm text-[#1C1C1C] placeholder-[#A8A8A8] focus:outline-none focus:border-[#4A7C59] focus:ring-1 focus:ring-[#4A7C59] transition-colors resize-none"
+                  className="w-full bg-[#F7F8FA] border border-[#E5E8EB] rounded-xl px-4 py-3 text-sm text-[#191F28] placeholder-[#8B95A1] focus:outline-none focus:border-[#3182F6] focus:ring-1 focus:ring-[#3182F6] transition-colors resize-none"
                 />
               </div>
 
               {/* Error message */}
               {status === "error" && (
                 <p className="text-red-500 text-sm">
-                  전송에 실패했습니다. lje1080@gmail.com으로 직접 연락해 주세요.
+                  전송에 실패했어요. lje1080@gmail.com으로 직접 연락해주세요.
                 </p>
               )}
 
@@ -283,13 +282,13 @@ export default function InquiryModal({ isOpen, onClose }: InquiryModalProps) {
               <button
                 type="submit"
                 disabled={status === "sending"}
-                className="w-full bg-[#4A7C59] text-white font-bold text-base py-4 rounded-xl hover:bg-[#2D5016] transition-colors duration-200 disabled:opacity-60 disabled:cursor-not-allowed"
+                className="w-full bg-[#3182F6] text-white font-bold text-base py-4 rounded-xl hover:bg-[#1B64DA] transition-colors duration-200 disabled:opacity-60 disabled:cursor-not-allowed"
               >
                 {status === "sending" ? "전송 중..." : "의뢰서 보내기 →"}
               </button>
 
-              <p className="text-center text-xs text-[#A8A8A8]">
-                lje1080@gmail.com으로 전달됩니다 · 빠르면 24시간 내 답장
+              <p className="text-center text-xs text-[#8B95A1]">
+                lje1080@gmail.com으로 전달돼요 · 빠르면 24시간 내 답장
               </p>
             </form>
           )}

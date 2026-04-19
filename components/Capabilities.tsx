@@ -5,12 +5,12 @@ export default function Capabilities() {
     <section id="capabilities" className="py-24 bg-white">
       <div className="max-w-5xl mx-auto px-6">
         <div className="text-center mb-16">
-          <p className="text-sm font-medium text-[#4A7C59] uppercase tracking-widest mb-3">
+          <p className="text-sm font-medium text-[#3182F6] uppercase tracking-widest mb-3">
             Capabilities
           </p>
-          <h2 className="text-4xl font-black text-[#1C1C1C] mb-4">무엇을 할 수 있나요</h2>
-          <p className="text-[#6B6B6B] text-lg">
-            여러 분야를 넘나들며 쌓은 실행력. 한 가지만 잘하는 사람이 아닙니다.
+          <h2 className="text-4xl font-black text-[#191F28] mb-4">이런 일을 합니다</h2>
+          <p className="text-[#8B95A1] text-lg">
+            기획·운영·분석·글쓰기. 분야를 가리지 않아요.
           </p>
         </div>
 
@@ -18,14 +18,14 @@ export default function Capabilities() {
           {capabilities.map((cap, i) => (
             <div
               key={cap.title}
-              className="bg-[#F5F1E8] border border-[#D8CEB8] rounded-2xl p-6 hover:border-[#4A7C59] hover:shadow-md transition-all duration-200 group"
+              className="bg-[#F7F8FA] border border-[#E5E8EB] rounded-2xl p-6 hover:border-[#3182F6] hover:shadow-md transition-all duration-200 group"
               style={{ animationDelay: `${i * 0.1}s` }}
             >
               <div className="text-3xl mb-4">{cap.icon}</div>
-              <h3 className="text-lg font-bold text-[#1C1C1C] mb-2 group-hover:text-[#4A7C59] transition-colors">
+              <h3 className="text-lg font-bold text-[#191F28] mb-2 group-hover:text-[#3182F6] transition-colors">
                 {cap.title}
               </h3>
-              <p className="text-[#6B6B6B] text-sm leading-relaxed">{cap.description}</p>
+              <p className="text-[#8B95A1] text-sm leading-relaxed">{cap.description}</p>
             </div>
           ))}
         </div>

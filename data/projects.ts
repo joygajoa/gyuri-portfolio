@@ -167,32 +167,32 @@ export const capabilities = [
   {
     icon: "🗂",
     title: "서비스 기획",
-    description: "문제 정의부터 MVP 기획까지. 사용자 관점에서 서비스를 설계합니다.",
+    description: "문제를 정의하고 해결책을 설계해요. 사용자 관점에서 서비스를 만들어요.",
   },
   {
     icon: "🔍",
     title: "UX 리서치·분석",
-    description: "사용자 인터뷰, 서비스 분석, 데이터로 실제 문제를 찾아냅니다.",
+    description: "인터뷰와 데이터로 진짜 문제를 찾아요. 서비스 개선 포인트를 도출해요.",
   },
   {
     icon: "🎪",
     title: "이벤트·행사 기획",
-    description: "기획·섭외·예산·운영·아카이브까지 행사 전 과정을 책임집니다.",
+    description: "기획·섭외·예산·운영까지 혼자 다 할 수 있어요.",
   },
   {
     icon: "🌱",
     title: "프로그램 운영",
-    description: "교육·커뮤니티·알럼나이 프로그램. 사람을 모으고 움직이게 합니다.",
+    description: "교육·커뮤니티 프로그램을 기획하고 사람을 모아 운영해요.",
   },
   {
     icon: "📣",
     title: "콘텐츠·홍보 기획",
-    description: "SNS, 에디토리얼, 브랜드 홍보 콘텐츠를 전략적으로 기획합니다.",
+    description: "SNS, 브랜드 콘텐츠, 이벤트 홍보를 전략적으로 기획해요.",
   },
   {
     icon: "✍️",
     title: "글쓰기·카피라이팅",
-    description: "UX라이팅, 기획서, 카피. 읽히는 글로 설득합니다.",
+    description: "UX 라이팅, 기획서, 카피. 읽히는 글로 설득해요.",
   },
 ];
 
