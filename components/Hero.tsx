@@ -31,17 +31,19 @@ export default function Hero({ onInquiryClick }: HeroProps) {
 
           {/* Main headline */}
           <h1 className="text-5xl md:text-6xl font-black text-[#1C1C1C] leading-tight mb-6 animate-fade-in-up delay-100">
-            기획부터 실행까지,
+            그림 그리다가
             <br />
-            <span className="text-[#4A7C59]">혼자 다 해본</span> 사람
+            <span className="text-[#4A7C59]">PM이 됐습니다.</span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-xl text-[#6B6B6B] leading-relaxed mb-4 animate-fade-in-up delay-200">
-            리서치하고, 기획하고, 운영하고, 씁니다.
+            문화재단, 스타트업, e러닝 플랫폼까지—
           </p>
           <p className="text-lg text-[#6B6B6B] leading-relaxed mb-10 animate-fade-in-up delay-300">
-            아이디어를 현실로 만들어드립니다.
+            업을 가리지 않았더니 할 수 있는 게 많아졌습니다.
+            <br />
+            533명을 모집하고, 행사장에도 나가고, 글도 씁니다.
           </p>
 
           {/* Skill pills */}
