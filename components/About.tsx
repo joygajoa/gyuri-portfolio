@@ -13,7 +13,7 @@ export default function About() {
                   src="/profile.jpg"
                   alt="이규리 프로필 사진"
                   fill
-                  className="object-cover object-top"
+                  className="object-cover object-center"
                   sizes="256px"
                   priority
                 />
