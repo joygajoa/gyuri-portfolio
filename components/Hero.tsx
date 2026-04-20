@@ -30,9 +30,9 @@ export default function Hero({ onInquiryClick }: HeroProps) {
 
           {/* Main headline */}
           <h1 className="text-5xl md:text-6xl font-black text-[#191F28] leading-tight mb-6 animate-fade-in-up delay-100">
-            매번 처음인 일을
+            처음인 일도
             <br />
-            <span className="text-[#3182F6]">해왔고, 해냈습니다.</span>
+            <span className="text-[#3182F6]">언제나 해냈어요.</span>
           </h1>
 
           {/* Subheadline */}
