@@ -27,7 +27,7 @@ export default function Footer({ onInquiryClick }: FooterProps) {
           </div>
         </div>
         <div className="border-t border-[#2C3340] mt-8 pt-8 text-center text-[#4E5968] text-xs">
-          © 2025 이규리 (Gyu Ri Lee). All rights reserved.
+          © 2026 이규리 (Gyu Ri Lee). All rights reserved.
         </div>
       </div>
     </footer>
