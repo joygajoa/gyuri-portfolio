@@ -46,7 +46,7 @@ export default function About() {
             </p>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-3 gap-4 mb-8">
               {[
                 { value: "3년 11개월", label: "총 경력" },
                 { value: "533명", label: "프로그램 모집" },
@@ -57,6 +57,34 @@ export default function About() {
                   <div className="text-xs text-[#8B95A1] mt-1">{label}</div>
                 </div>
               ))}
+            </div>
+
+            {/* Tools */}
+            <div className="mb-6">
+              <p className="text-xs font-medium text-[#8B95A1] uppercase tracking-widest mb-3">사용 툴</p>
+              <div className="flex flex-wrap gap-2">
+                {["Figma", "Notion", "Slack"].map((tool) => (
+                  <span key={tool} className="bg-white border border-[#E5E8EB] text-[#4E5968] text-sm px-3 py-1 rounded-full font-medium">
+                    {tool}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Awards & Credentials */}
+            <div>
+              <p className="text-xs font-medium text-[#8B95A1] uppercase tracking-widest mb-3">수상 · 기타</p>
+              <ul className="space-y-1.5">
+                {[
+                  { year: "2017", text: "경기지역대학연합 창업동아리 아이디어 경진대회 최우수상" },
+                  { year: "2018", text: "경기도 따복스터디 온마을 미래교육 퍼실리테이터 1기 수료" },
+                ].map(({ year, text }) => (
+                  <li key={text} className="flex items-start gap-2 text-sm text-[#4E5968]">
+                    <span className="text-[#3182F6] font-semibold shrink-0">{year}</span>
+                    <span>{text}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>

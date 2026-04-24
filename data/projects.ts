@@ -30,6 +30,9 @@ export const projects: Project[] = [
       "한화 연계 온라인 취업 박람회 기획 및 운영",
       "6개 부트캠프 취업률 데이터 클린 관리 및 커리어코칭 개선 기획",
       "미취업 원인 분석 보고서 제작 (사내 배포)",
+      "K12 콘텐츠 파트 전체 프로젝트 일정 관리 및 인력 배치",
+      "팀원 1on1 케어 및 교안 산출물 퀄리티 관리",
+      "시연 강연 기획 및 운영",
     ],
     tags: ["프로그램기획", "Growth PM", "커뮤니티운영", "데이터관리", "보고서작성"],
     highlight: "8개 프로그램 · 533명 모집 · 만족도 4.6점 · 취업 제의 50%",
@@ -125,6 +128,22 @@ export const projects: Project[] = [
     ],
     tags: ["서비스기획", "UX리서치", "사용자인터뷰", "시장분석", "PM"],
     highlight: "반려동물 버티컬 플랫폼 UX 기획 · 프로젝트 리드",
+  },
+  {
+    id: "abb-hackathon",
+    title: "ABB Hackathon 운영지원",
+    organization: "ABB Hackathon",
+    category: "이벤트기획",
+    period: "2023.10",
+    role: "운영지원 · CS 담당",
+    summary:
+      "ABB Hackathon에서 행사 운영지원 및 CS 업무를 담당했습니다. 참가자 문의 대응과 현장 운영을 지원했습니다.",
+    outcomes: [
+      "해커톤 현장 운영지원",
+      "참가자 CS 업무 진행",
+    ],
+    tags: ["이벤트기획", "행사운영", "CS"],
+    highlight: "ABB Hackathon 운영지원 · CS 담당",
   },
   {
     id: "codethon",
